@@ -6,13 +6,15 @@ import org.junit.Test;
 
 public class TourTest {
 
+    Disque d1 = new Disque(1);
+    Disque d2 = new Disque(2);
+    Disque d3 = new Disque(3);
+    Disque d4 = new Disque(4);
     @Test
     /**
      * GIVEN_WHEN_THEN
      */
     public void testEmpiler_TourNonVide_avec_DisquePlusPetit() {
-        Disque d1 = new Disque(10);
-        Disque d3 = new Disque(30);
         Tour t = new Tour(2);
         
         t.empiler(d3);
@@ -23,10 +25,10 @@ public class TourTest {
     }
     
     @Test
+    /**
+     * ajout à la Tour Non Vide un Disque Plus grand
+     */
     public void testEmplielr_TourNonVide_et_DisquePlusgrand(){
-        Disque d1 = new Disque(10);
-        Disque d3 = new Disque(30);
-        
         Tour _TourNonVide = new Tour();
         _TourNonVide.empiler(d1);
         
@@ -38,8 +40,10 @@ public class TourTest {
     
    
     @Test
+    /**
+     * empiller un disque sur tour vide
+     */
     public void testEmpiler_TourVide() {
-            Disque d1 = new Disque(1);
             Tour t = new Tour();
             
             boolean expected = true;
@@ -49,11 +53,10 @@ public class TourTest {
     }
     
     @Test
+    /**
+     * empiller un disque sur tour plein
+     */
     public void testEmpiler_TourPlein() {
-            Disque d1 = new Disque(1);
-            Disque d2 = new Disque(2);
-            Disque d3 = new Disque(3);
-            Disque d4 = new Disque(4);
             Tour t = new Tour();
             
             boolean expected = false;
