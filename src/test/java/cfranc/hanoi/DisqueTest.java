@@ -33,7 +33,7 @@ public class DisqueTest {
     /**
      * Compare petit disque et un disque moyen
      */
-    public void compareTo_Small_to_Medium(){
+    public void compareTo_Small_to_Medium_Negatif(){
             int expected = -1;
             int actual = dSmall.compareTo(dMedium);
             assertEquals(expected, actual);
@@ -43,7 +43,7 @@ public class DisqueTest {
     /**
      * Compare disque moyen et un grand disque
      */
-    public void compareTo_Medium_to_Tall(){
+    public void compareTo_Medium_to_Tall_Negatif(){
         int expected = -1;
         int actual = dMedium.compareTo(dTall);
         assertEquals(expected, actual);
@@ -53,7 +53,7 @@ public class DisqueTest {
     /**
      * Compare petit disque et un grand disque
      */
-    public void compareTo_Small_to_Tall(){
+    public void compareTo_Small_to_Tall_Negatif(){
         int expected = -1;
         int actual = dSmall.compareTo(dTall);
         assertEquals(expected, actual);

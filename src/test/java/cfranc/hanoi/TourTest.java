@@ -14,7 +14,7 @@ public class TourTest {
     /**
      * GIVEN_WHEN_THEN
      */
-    public void testEmpiler_TourNonVide_avec_DisquePlusPetit() {
+    public void testEmpiler_TourNonVideAvecDisquePlusPetit_True() {
         Tour t = new Tour(2);
         
         t.empiler(d3);
@@ -28,7 +28,7 @@ public class TourTest {
     /**
      * ajout à la Tour Non Vide un Disque Plus grand
      */
-    public void testEmplielr_TourNonVide_et_DisquePlusgrand(){
+    public void testEmplielr_TourNonVideEtDisquePlusgrand_False(){
         Tour _TourNonVide = new Tour();
         _TourNonVide.empiler(d1);
         
@@ -43,7 +43,7 @@ public class TourTest {
     /**
      * empiller un disque sur tour vide
      */
-    public void testEmpiler_TourVide() {
+    public void testEmpiler_TourVide_True() {
             Tour t = new Tour();
             
             boolean expected = true;
@@ -56,14 +56,14 @@ public class TourTest {
     /**
      * empiller un disque sur tour plein
      */
-    public void testEmpiler_TourPlein() {
+    public void testEmpiler_TourPlein_False() {
             Tour t = new Tour();
             
             boolean expected = false;
-            t.empiler(d1);
-            t.empiler(d2);
+            t.empiler(d4);
             t.empiler(d3);
-            boolean result = t.empiler(d4);
+            t.empiler(d2);
+            boolean result = t.empiler(d1);
             
             assertEquals(expected, result);      
     }
