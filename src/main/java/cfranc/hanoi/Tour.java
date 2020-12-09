@@ -11,21 +11,21 @@ public class Tour implements IPile<Disque>{
 	
 	@Override
 	public boolean empiler(Disque d) {
-        boolean res=false;
-        if(disques.isEmpty()){
-            disques.offer(d);
-            res=true;
-        }
-        else{
-            if( (disques.element().d>d.d) && (taille()<hauteurMax) ){
-                res=true;
+            boolean res=false;
+            if(disques.isEmpty()){
                 disques.offer(d);
+                res=true;
             }
             else{
-                res=false;
+                if( (disques.element().d>d.d) && (taille()<hauteurMax) ){
+                    res=true;
+                    disques.offer(d);
+                }
+                else{
+                    res=false;
+                }
             }
-        }
-        return res;
+            return res;
 	}
 
 	public Tour() {

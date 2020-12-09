@@ -9,13 +9,13 @@ public class Disque implements Comparable<Disque>{
 
 	@Override
 	public int compareTo(Disque obj) {
-		int res=0;
-		if (this.d<obj.d) {
-			res = -1;
-		}
-		else if (this.d>obj.d) {
-			res = 1;
-		}
-		return res;
+            int res=0;
+            if (this.d<obj.d) {
+                    res = -1;
+            }
+            else if (this.d>obj.d) {
+                    res = 1;
+            }
+            return res;
 	}
 }
