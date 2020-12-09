@@ -58,4 +58,14 @@ public class DisqueTest {
         int actual = dSmall.compareTo(dTall);
         assertEquals(expected, actual);
     }
+    
+    @Test
+    /**
+     * Compare medium disque et un medium disque
+     */
+    public void compareTo_Medium_to_Medium_Negatif(){
+        int expected = 0;
+        int actual = dMedium.compareTo(dMedium);
+        assertEquals(expected, actual);
+    }
 }
